@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: linear-gradient(rgb(20, 6, 37), rgb(13, 1, 27), rgb(14, 1, 29), rgb(14, 1, 29), black);
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* GALLERY TITLE */
+        .title {
+            font-family: "Montserrat", sans-serif;
+            font-size: clamp(2rem, 2.5vw, 2.5rem);
+
+            font-weight: 500;
+            color: white;
+        }
+
+        .title-box {
+            display: inline-flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+
+            margin-bottom: 3vh;
+            margin-top: 3vh;
+        }
+
+        .title-box::after {
+            margin-top: 1vh;
+            content: "";
+            width: 70%;
+            height: 3px;
+            background: linear-gradient(to left, rgba(26, 8, 43, 0), #8026d9, #571a94, #8026d9, rgba(26, 8, 43, 0));
+
+            transition: width 1.2s ease;
+        }
+
+        .title-box:hover::after,
+        .title-box:active::after {
+            content: "";
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(to left, rgba(26, 8, 43, 0), #8026d9, #571a94, #8026d9, rgba(26, 8, 43, 0));
+
+            transition: width 1.2s ease;
+        }
+
+        /* LINKS ON FRONT PAGE */
+        .home-page-link {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            color: #581a96;
+            text-decoration: underline;
+
+            font-size: clamp(1rem, 1.8vw, 1.5rem);
+        }
+
+        .home-page-link:hover {
+            cursor: pointer;
+            color: white;
+        }
+
+
+        /* CONTAIN EVERYTHING ELSE */
+        .content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+            width: 85%;
+            margin: auto;
+
+            margin-bottom: 15vh;
+
+        }
+
+
+        /* MEDIA CONTENT */
+        figure {
+            min-width: 400px;
+            width: 40%;
+            max-width: 600px;
+
+            margin: 40px 10px 25px 10px;
+        }
+
+        img {
+            border-radius: 5px;
+            width: 100%;
+
+            border-radius: 10px;
+            box-shadow: 0 0 15px -5px white;
+        }
+
+        video {
+            border-radius: 5px;
+            width: 100%;
+
+            border-radius: 10px;
+            box-shadow: 0 0 15px -5px white;
+        }
+
+        /* MEDIA DESCRIPTION */
+        figcaption {
+            text-align: center;
+            margin-top: 15px;
+
+            font-family: "Montserrat", sans-serif;
+            font-weight: 300;
+            font-size: clamp(1rem, 1.5vw, 1.5rem);
+            color: white;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="header">
+
+        <div class="title-box">
+            <h2 class="title">Some Examples</h2>
+        </div>
+        <a href="home-page.html" class="home-page-link">&lt; Return</a>
+
+    </div>
+
+
+
+
+    <div class="content">
+
+        <figure>
+            <img src="images/IMG_6268.jpeg">
+            <figcaption>RC Circuit Used as a Timer</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/IMG_5160.jpeg">
+            <figcaption>Digital Numbers</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/IMG_5277.jpeg">
+            <figcaption>Face Tracking Device</figcaption>
+        </figure>
+
+        <!--
+        <figure>
+            <video controls width="100%">
+                <source src="" muted controls type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <figcaption>hello there</figcaption>
+        </figure>
+        -->
+
+        <figure>
+            <img src="images/IMG_6247.jpeg">
+            <figcaption>Understanding Pull Up/Pull Down Resistors</figcaption>
+        </figure>
+    </div>
+
+
+</body>
+
+</html>
